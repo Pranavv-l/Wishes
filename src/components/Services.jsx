@@ -70,6 +70,7 @@ const Services = () => {
                             alt={activeService.title}
                             className="service-image"
                             key={activeService.id} // Key change triggers animation
+                            loading="lazy"
                         />
                     </div>
                 </div>

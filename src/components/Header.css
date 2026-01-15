@@ -60,7 +60,8 @@
     height: 100vh;
     background-color: #044974;
     /* Dark blue */
-    z-index: 101;
+    z-index: 200;
+    /* Ensure it covers logo (z-102) */
     transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;

@@ -61,7 +61,8 @@
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
+    /* Reduced from 2.5rem */
     max-width: 450px;
     text-align: center;
 }
@@ -187,14 +188,49 @@
 }
 
 .card-engagement .card-bg-img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    left: auto;
-    right: 0.5rem;
     top: 50%;
     transform: translateY(-50%);
     object-fit: contain;
+}
+
+/* Updated Layouts for Specific Cards as per user request */
+.card-support,
+.card-identity,
+.card-engagement {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.card-support .card-title,
+.card-identity .card-title,
+.card-engagement .card-title {
+    order: 1;
+    margin-bottom: 1rem;
+    position: relative;
+    /* Ensure it's in flow, not separate layer if z-index matches */
+    z-index: 5;
+}
+
+.card-support .card-bg-img,
+.card-identity .card-bg-img,
+.card-engagement .card-bg-img {
+    order: 2;
+    position: relative;
+    /* Un-absolute them for this layout */
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 80%;
+    /* Adjust size */
+    height: auto;
+    max-height: 200px;
+    margin-top: auto;
+    /* Push to bottom if needed */
 }
 
 /* 7. Content With Perfection: 2x2 but looking at image, it's 2 cols wide.
@@ -270,9 +306,20 @@
         font-size: 80px;
     }
 
+    .why-us-title-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .why-us-label-container {
-        left: 2rem;
-        top: 2rem;
+        position: static;
+        margin: 0 0 2rem 0;
+        /* Increased spacing to move label "up" away from headline */
+        left: auto;
+        top: auto;
+        transform: none;
+        justify-content: center;
+        width: 100%;
     }
 }
 
@@ -303,6 +350,6 @@
     .why-us-label-container {
         position: absolute;
         left: 0;
-        top: 0;
+        top: -4rem;
     }
 }

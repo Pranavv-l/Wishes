@@ -237,18 +237,14 @@
 
     .work-card-wrapper:nth-child(1) .work-card,
     .work-card-wrapper:nth-child(2) .work-card,
-    .work-card-wrapper:nth-child(3) .work-card,
-    .work-card-wrapper:nth-child(4) .work-card {
-        width: 100%;
-        padding: 1.5rem;
-    }
-
-    .work-image-container,
-    .work-card-wrapper:nth-child(1) .work-image-container,
-    .work-card-wrapper:nth-child(2) .work-image-container,
-    .work-card-wrapper:nth-child(3) .work-image-container,
     .work-card-wrapper:nth-child(4) .work-image-container {
         height: 300px;
+    }
+
+    .work-card-wrapper:nth-child(4) .work-card {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
     }
 
     .works-list {
@@ -267,7 +263,12 @@
     }
 
     .selected-works-label-container {
-        left: 1.5rem;
-        top: 2rem;
+        position: static;
+        margin: 0 0 3rem 0;
+        /* Increased spacing between label and title */
+        justify-content: center;
+        width: 100%;
+        left: auto;
+        top: auto;
     }
 }

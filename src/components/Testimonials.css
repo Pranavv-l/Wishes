@@ -165,7 +165,7 @@
 
 .ticker-track {
     display: flex;
-    gap: 2rem;
+    gap: 6rem;
     /* Create infinite scroll animation */
     padding-left: 400px;
     /* Start initially offset so first item isn't immediately hidden? */
@@ -305,25 +305,51 @@
         -webkit-mask-image: none;
     }
 
-    .ticker-track {
-        animation: scrollTickerResponsive 30s linear infinite;
-    }
-
-    @keyframes scrollTickerResponsive {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
     .testimonials-header-row {
-        left: 2rem;
-        top: 2rem;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 2rem;
     }
 }
+
+/* User requested slower speed */
+.ticker-track {
+    animation-duration: 90s;
+    /* Slower than 60s */
+}
+
+@media (max-width: 1024px) {
+    .ticker-track {
+        gap: 6rem;
+        /* Increased spacing */
+        animation-duration: 90s;
+        /* Keep consistent or even slower for mobile reading */
+    }
+
+    /* Fix Label Stacking */
+    .testimonials-header-row {
+        position: static;
+        /* Not absolute/relative with weird offsets */
+        flex-direction: row;
+        /* Keep dot next to label */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        transform: none;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonials-intro {
+        flex-direction: column;
+    }
+}
+
 
 @media (max-width: 768px) {
     .testimonials-headline {

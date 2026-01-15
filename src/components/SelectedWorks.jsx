@@ -6,28 +6,28 @@ const works = [
         id: 1,
         title: 'Blessed by the sun',
         year: '2025',
-        image: '/public/fastcar.webp',
+        image: '/fastcar.webp',
         className: 'work-wide'
     },
     {
         id: 2,
         title: 'Princess at a beach',
         year: '2025',
-        image: '/public/princess-beach.webp',
+        image: '/princess-beach.webp',
         className: 'work-compact'
     },
     {
         id: 3,
         title: 'Hallucinogens',
         year: '2023',
-        image: '/public/hallulo.webp',
+        image: '/hallulo.webp',
         className: 'work-portrait'
     },
     {
         id: 4,
         title: 'Lonely Lady',
         year: '2024',
-        image: '/public/loney_lady.webp',
+        image: '/loney_lady.webp',
         className: 'work-wide'
     }
 ];
@@ -48,7 +48,7 @@ const SelectedWorks = () => {
                     <div key={work.id} className={`work-card-wrapper ${index % 2 === 0 ? 'left' : 'right'}`}>
                         <div className={`work-card ${work.className}`}>
                             <div className="work-image-container">
-                                <img src={work.image} alt={work.title} className="work-image" />
+                                <img src={work.image} alt={work.title} className="work-image" loading="lazy" />
                             </div>
                             <div className="work-info">
                                 <span className="work-title">{work.title}</span>

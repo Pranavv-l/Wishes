@@ -188,8 +188,8 @@
 .contact-image-placeholder {
     width: 100%;
     height: 100%;
-    background-image: url('public/contactus.webp');
-    /* Placeholder image of woman in dress */
+    /* Fix Image Path */
+    background-image: url('/contactus.webp');
     background-size: cover;
     background-position: center;
 }
@@ -198,18 +198,61 @@
     .contact-content-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+        text-align: center;
+    }
+
+    .contact-left-col {
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        align-items: center;
+    }
+
+    .form-group {
+        width: 100%;
+        text-align: left;
+    }
+
+    /* .form-input removed or revert specific styles if any were unique, but previously only had text-align added. */
+
+    .submit-button {
+        margin: 1rem auto 0;
+        align-self: center;
+        transform: translateX(15px);
+        /* Visual adjustment */
+    }
+
+    /* .contact-info removed */
+
+    .contact-subtext {
+        text-align: center;
+        align-self: center;
+        margin-bottom: 2rem;
     }
 
     .contact-right-col {
         padding-top: 0;
+        align-items: center;
     }
 
     .contact-headline {
-        font-size: 64px;
+        font-size: 40px;
+        text-align: center;
     }
 
     .contact-header {
-        left: 1.5rem;
-        top: 2rem;
+        position: static;
+        justify-content: center;
+        margin-bottom: 2rem;
+        margin-left: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .contact-section {
+        padding-top: 8rem;
+        /* Reduced from 15rem default */
     }
 }

@@ -56,7 +56,7 @@ const Testimonials = () => {
                 <div className="static-image-card">
                     <div className="static-card-bg">
                         {/* Placeholder for image - using color or pattern if no image available immediately */}
-                        <img src="public/testimo.webp" alt="Emily Ludwig" className="static-card-image" style={{ display: 'none' }} />
+                        <img src="/testimo.webp" alt="Emily Ludwig" className="static-card-image" style={{ display: 'none' }} loading="lazy" />
                         <div className="static-card-image-placeholder"></div>
                     </div>
                     <div className="static-card-overlay">
